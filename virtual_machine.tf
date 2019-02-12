@@ -16,6 +16,13 @@ resource "azurerm_virtual_machine" "vm" {
     sku       = "${var.vm_storage_image_sku}"
     version   = "${var.vm_storage_image_version}"
   }
+
+  plan {
+    name      = "${var.plan_name}"
+    publisher = "${var.vm_storage_image_publisher}"
+    product   = "${var.plan_product}"
+  }
+
   storage_os_disk {
     name              = "${var.vm_storage_os_disk_name}${count.index + 1}"
     caching           = "${var.vm_storage_os_disk_caching}"

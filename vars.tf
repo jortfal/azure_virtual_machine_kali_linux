@@ -101,6 +101,17 @@ variable "vm_storage_image_version" {
     description = ""
     type        = "string"
 }
+
+variable "plan_name" {
+    description = ""
+    type        = "string"
+}
+
+variable "plan_product" {
+    description = ""
+    type        = "string"
+}
+
 variable "vm_storage_os_disk_name" {
     description = ""
     type        = "string"
