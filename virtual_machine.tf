@@ -10,24 +10,25 @@ resource "azurerm_virtual_machine" "vm" {
   delete_os_disk_on_termination    = "${var.vm_delete_os_disk_on_termination}"
   delete_data_disks_on_termination = "${var.vm_delete_data_disks_on_termination}"
 
-  storage_image_reference {
-    publisher = "${var.vm_storage_image_publisher}"
-    offer     = "${var.vm_storage_image_offer}"
-    sku       = "${var.vm_storage_image_sku}"
-    version   = "${var.vm_storage_image_version}"
-  }
+  # storage_image_reference {
+  #   publisher = "${var.vm_storage_image_publisher}"
+  #   offer     = "${var.vm_storage_image_offer}"
+  #   sku       = "${var.vm_storage_image_sku}"
+  #   version   = "${var.vm_storage_image_version}"
+  # }
 
-  plan {
-    name      = "${var.plan_name}"
-    publisher = "${var.vm_storage_image_publisher}"
-    product   = "${var.plan_product}"
-  }
+  # plan {
+  #   name      = "${var.plan_name}"
+  #   publisher = "${var.vm_storage_image_publisher}"
+  #   product   = "${var.plan_product}"
+  # }
 
   storage_os_disk {
     name              = "${var.vm_storage_os_disk_name}${count.index + 1}"
     caching           = "${var.vm_storage_os_disk_caching}"
     create_option     = "${var.vm_storage_os_disk_create_option}"
     managed_disk_type = "${var.vm_storage_os_disk_managed_disk_type}"
+    
   }
   os_profile {
     computer_name  = "${var.vm_os_profile_os_profile_computer_name}${count.index + 1}"
