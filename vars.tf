@@ -85,32 +85,32 @@ variable "vm_delete_data_disks_on_termination" {
     default     = false
 }
 
-# variable "vm_storage_image_publisher" {
-#     description = ""
-#     type        = "string"
-# }
-# variable "vm_storage_image_offer" {
-#     description = ""
-#     type        = "string"
-# }
-# variable "vm_storage_image_sku" {
-#     description = ""
-#     type        = "string"
-# }
-# variable "vm_storage_image_version" {
-#     description = ""
-#     type        = "string"
-# }
+variable "vm_storage_image_publisher" {
+    description = ""
+    type        = "string"
+}
+variable "vm_storage_image_offer" {
+    description = ""
+    type        = "string"
+}
+variable "vm_storage_image_sku" {
+    description = ""
+    type        = "string"
+}
+variable "vm_storage_image_version" {
+    description = ""
+    type        = "string"
+}
 
-# variable "plan_name" {
-#     description = ""
-#     type        = "string"
-# }
+variable "plan_name" {
+    description = ""
+    type        = "string"
+}
 
-# variable "plan_product" {
-#     description = ""
-#     type        = "string"
-# }
+variable "plan_product" {
+    description = ""
+    type        = "string"
+}
 
 variable "vm_storage_os_disk_name" {
     description = ""
@@ -129,13 +129,6 @@ variable "vm_storage_os_disk_managed_disk_type" {
     description = ""
     type        = "string"
 }
-
-variable "vm_storage_os_image_uri" {
-    description = ""
-    type        = "string"
-}
-
-
 variable "vm_os_profile_os_profile_computer_name" {
     description = ""
     type        = "string"
