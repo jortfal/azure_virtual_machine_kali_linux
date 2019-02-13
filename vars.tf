@@ -107,6 +107,11 @@ variable "plan_name" {
     type        = "string"
 }
 
+variable "plan_publisher" {
+    description = ""
+    type        = "string"
+}
+
 variable "plan_product" {
     description = ""
     type        = "string"

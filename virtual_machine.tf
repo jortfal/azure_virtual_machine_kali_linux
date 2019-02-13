@@ -19,7 +19,7 @@ resource "azurerm_virtual_machine" "vm" {
 
   plan {
     name      = "${var.plan_name}"
-    publisher = "${var.vm_storage_image_publisher}"
+    publisher = "${var.plan_publisher}"
     product   = "${var.plan_product}"
   }
 
