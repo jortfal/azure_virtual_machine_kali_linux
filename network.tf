@@ -23,7 +23,7 @@ resource "azurerm_network_interface" "nic" {
     subnet_id                     = "${data.azurerm_subnet.subnet.id}"
     private_ip_address_allocation = "${var.nic_ip_configuration_private_ip_address_allocation}"
     # private_ip_address            = "${lookup(var.nic_mgmt_ip_configuration_private_ip_address, count.index)}"
-    public_ip_address_id          = "${azurerm_public_ip.pi.id}"
+    public_ip_address_id          = "${element(azurerm_public_ip.pi.*.id, count.index)}"
   }
 
   tags {
